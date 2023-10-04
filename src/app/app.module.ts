@@ -13,22 +13,35 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NotesComponent } from './pages/notes/notes.component';
+import { ContentsComponent } from './pages/contents/contents.component';
+import { ExtrasComponent } from './pages/extras/extras.component';
+import { FormsComponent } from './pages/forms/forms.component';
+import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { NzFormModule } from 'ng-zorro-antd/form';
+
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotesComponent,
+    ContentsComponent,
+    ExtrasComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NzCollapseModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     IconsProviderModule,
     NzLayoutModule,
-    NzMenuModule
+    NzMenuModule,
+    NzFormModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
